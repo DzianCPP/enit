@@ -1,16 +1,24 @@
 {% block tabs %}
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-tabs border-bottom border-light" id="myTab" role="tablist">
             {% for tab in tabs %}
             <li class="nav-item" role="presentation">
-                <button class="nav-link {% if request_uri == tab.href %} {{ 'active' }} {% endif %}"
-                    id="{{ tab.innerHTML }}-tab" data-bs-toggle="tab" data-bs-target="#{{ tab.innerHTML }}"
-                    type="button" role="tab" aria-controls="{{ tab.innerHTML }}"
+                <button class="
+                        {% if request_uri == tab.href %}
+                            {{ 'bg-dark text-secondary' }}
+                        {% else %}
+                            {{ 'bg-light text-dark' }}
+                        {% endif %}
+                        {{ 'nav-link' }}
+                        {% if request_uri == tab.href %}
+                            {{ 'active' }}
+                        {% endif %}" id="{{ tab.innerHTML }}-tab" data-bs-toggle="tab"
+                    data-bs-target="#{{ tab.innerHTML }}" type="button" role="tab" aria-controls="{{ tab.innerHTML }}"
                     aria-selected="{% if request_uri == tab.href %} {{ 'true' }} {% else %} {{ 'false' }} {% endif %}">
                     {{ tab.innerHTML }}
             </li>
             {% endfor %}
         </ul>
     </div>
-{% endblock %}
+    {% endblock %}
