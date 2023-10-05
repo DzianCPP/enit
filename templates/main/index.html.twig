@@ -1,9 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-	<div class="row">
-		<div class="h1">{{ header }}</div>
-	</div>
 
+<div class="container">
+
+	{% use 'components/header.html.twig' %}
+	{% block header %} {{ parent() }} {% endblock %}
+
+	{% use 'components/tab_bar.html.twig' %}
+	{% block tabs %} {{ parent() }} {% endblock %}
+
+	{% use 'components/tab_pages.html.twig' %}
+	{% block tab_pages %} {{ parent() }} {% endblock %}
+
+</div>
 
 {% endblock %}
