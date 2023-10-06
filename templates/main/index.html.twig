@@ -2,17 +2,7 @@
 
 {% block body %}
 
-<div class="container">
-
-	{% use 'components/header.html.twig' %}
-	{% block header %} {{ parent() }} {% endblock %}
-
-	{% use 'components/tab_bar.html.twig' %}
-	{% block tabs %} {{ parent() }} {% endblock %}
-
 	{% use 'components/tab_pages.html.twig' %}
 	{% block tab_pages %} {{ parent() }} {% endblock %}
-
-</div>
 
 {% endblock %}
