@@ -22,7 +22,10 @@ class EnitController extends BaseController
             [
                 'title' => 'EnIT',
                 'header' => 'EnIT',
-                'images' => $this->getEnitCarouselImages()
+                'images' => $this->getEnitCarouselImages(),
+                'usp' => 'Платформа для прокачки IT-английского',
+                'usp_button_inner_text' => 'Подробнее',
+                'bullet_points' => $this->getBulletPoints()
             ]
         );
     }
@@ -39,6 +42,24 @@ class EnitController extends BaseController
                 'src' => 'assets/images/enit/carousel_2.png',
                 'alt' => '...',
                 'active' => false
+            ]
+        ];
+    }
+
+    private function getBulletPoints(): array
+    {
+        return [
+            [
+                'text' => 'Платформа рассчитана на студентов с уровнем английского B1-C1 (Intermediate — Advanced).'
+            ],
+            [
+                'text' => 'Платформа сделана на Notion, и это значит, что всеми материалами удобно пользоваться и с компьютера, и с телефона, и с планшета.'
+            ],
+            [
+                'text' => 'Обновления и новые материалы будут появляться каждую неделю.'
+            ],
+            [
+                'text' => 'Доступ у вас останется навсегда.'
             ]
         ];
     }

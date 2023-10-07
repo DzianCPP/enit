@@ -28,7 +28,7 @@
 
 <body>
 
-	<div class="container">
+	<div class="container-fluid">
 
 		{% use 'components/header.html.twig' %}
 		{% block header %} {{ parent() }} {% endblock %}
@@ -37,7 +37,6 @@
 		{% block tabs %} {{ parent() }} {% endblock %}
 
 		{% block body %}{% endblock %}
-
 
 	</div>
 
