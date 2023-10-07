@@ -1,0 +1,7 @@
+{% block bullet_points %}
+<ul class="list">
+    {% for bullet_point in bullet_points %}
+    <li>{{ bullet_point.text }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

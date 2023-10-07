@@ -1,0 +1,21 @@
+{% block offers %}
+<div class="container mb-5">
+    <div class="row">
+        {% for offer in offers %}
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xxl-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ offer.title }}</h5>
+                    <ul class="list">
+                        {% for bullet_point in offer.bullet_points %}
+                        <li>{{ bullet_point }}</li>
+                        {% endfor %}
+                    </ul>
+                    <a href="#" class="btn btn-outline-dark w-100">{{ offer.price }}</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
