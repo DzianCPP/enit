@@ -1,10 +1,7 @@
 {% block bullet_points %}
-<ul class="list-group">
+<ul class="list">
     {% for bullet_point in bullet_points %}
-    <li class="list-group-item d-flex justify-content-left align-items-center">
-        <span class="badge bg-dark rounded-pill">{{ '-' }}</span>
-        <span class="ms-2">{{ bullet_point.text }}</span>
-    </li>
+    <li>{{ bullet_point.text }}</li>
     {% endfor %}
 </ul>
 {% endblock %}
