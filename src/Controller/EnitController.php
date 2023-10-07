@@ -25,9 +25,42 @@ class EnitController extends BaseController
                 'images' => $this->getEnitCarouselImages(),
                 'usp' => 'Платформа для прокачки IT-английского',
                 'usp_button_inner_text' => 'Подробнее',
-                'bullet_points' => $this->getBulletPoints()
+                'bullet_points' => $this->getBulletPoints(),
+                'offers' => $this->getOffers()
             ]
         );
+    }
+
+    private function getOffers(): array
+    {
+        return [
+            [
+                'title' => 'Демо',
+                'bullet_points' => [
+                    'Доступ на 24 часа',
+                    'Разделы с фильмами, лексикой и грамматикой'
+                ],
+                'price' => '0 RUB'
+            ],
+            [
+                'title' => '3 месяца',
+                'bullet_points' => [
+                    'Доступ на 3 месяца',
+                    'Все разделы',
+                    'Трекер прогресса в подарок'
+                ],
+                'price' => '3500 RUB'
+            ],
+            [
+                'title' => 'Безлимит',
+                'bullet_points' => [
+                    'Пожизненный доступ',
+                    'Все разделы',
+                    'Трекер прогресса в подарок'
+                ],
+                'price' => '5000 RUB'
+            ]
+        ];
     }
 
     private function getEnitCarouselImages(): array
