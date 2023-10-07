@@ -1,0 +1,29 @@
+{% block tabs %}
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            {% for tab in tabs %}
+            <li class="nav-item w-25" role="presentation">
+                <a
+                    class="
+                        {{ 'text-dark nav-link' }}
+                        {% if request_uri == tab.href %}
+                            {{ 'active' }}
+                        {% endif %}"
+                    id="{{ tab.innerHTML }}-tab"
+                    aria-selected="
+                            {% if request_uri == tab.href %}
+                                {{ 'true' }}
+                            {% else %}
+                                {{ 'false' }}
+                            {% endif %}"
+                    href="{{ tab.href }}"
+                >
+                    {{ tab.innerHTML }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}
