@@ -1,9 +1,25 @@
 {% block header %}
-
-<div class="row mt-2">
-    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xxl-12">
-        <div class="h1 text-center">{{ header }}</div>
+<nav class="navbar text-dark">
+    <div class="row w-100">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xxl-6">
+            <a class="navbar-brand text-dark ms-1">{{ header }}</a>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xxl-6">
+            <div class="input-group w-100">
+                <input
+                    type="text"
+                    class="form-control border-dark"
+                    placeholder="Поиск"
+                    aria-label="Поиск"
+                    aria-describedby="button-addon2">
+                <button
+                    class="btn btn-outline-dark"
+                    type="button"
+                    id="button-addon2">
+                    Найти
+                </button>
+            </div>
+        </div>
     </div>
-</div>
-
+</nav>
 {% endblock %}

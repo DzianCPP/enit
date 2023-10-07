@@ -58,11 +58,11 @@ abstract class BaseController extends AbstractController
     private function getTabs(): array
     {
         return [
-            [
-                'href' => '/',
-                'innerHTML' => 'Home',
-                'content' => 'Home content'
-            ],
+            // [
+            //     'href' => '/',
+            //     'innerHTML' => 'Home',
+            //     'content' => 'Home content'
+            // ],
             [
                 'href' => '/enit',
                 'innerHTML' => 'EnIT',

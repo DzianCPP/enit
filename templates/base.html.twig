@@ -30,8 +30,12 @@
 
 	<div class="container-fluid">
 
-		{% use 'components/header.html.twig' %}
-		{% block header %} {{ parent() }} {% endblock %}
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
+				{% use 'components/header.html.twig' %}
+				{% block header %} {{ parent() }} {% endblock %}
+			</div>
+		</div>
 
 		{% use 'components/tab_bar.html.twig' %}
 		{% block tabs %} {{ parent() }} {% endblock %}
